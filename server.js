@@ -1,19 +1,18 @@
-var _ = require('lodash');
+const _ = require('lodash');
 const express = require('express')
 const app = express()
-app.set('view engine', 'pug');
+const port = 6969
+
+app.use(express.static('static'))
+app.set('view engine', 'ejs');
 
 // Root pagina
 app.get('/', function (req, res) {
-    res.render('index', { title: 'Template engine werkt', message: 'Hello there!' })
-})
-
-app.get('/about', function (req, res) {
-    res.send('About page')
+    res.render('index', { title: 'Travel Buddy | Home', message: 'Welkom!!' })
 })
 
 app.get('/results', function (req, res) {
-    res.send('Result page')
+    res.render('results', { title: 'Travel Buddy | Results', message: 'Resultaten!!' })
 })
 
 // 404 pagina
@@ -21,4 +20,4 @@ app.use((req, res, next) => {
     res.send('Deze pagina bestaat niet!')
 })
 
-app.listen(3000)
+app.listen(port)
