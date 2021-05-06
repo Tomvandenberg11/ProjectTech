@@ -8,6 +8,7 @@
 body {
     background-color: whitesmoke;
     font-family: 'Montserrat', sans-serif;
+    max-height: 100vh;
 }
 
 .container {
