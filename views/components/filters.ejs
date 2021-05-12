@@ -1,0 +1,37 @@
+<div class="filters">
+    <button onclick="myFunction()">Filters</button>
+    <form id="filter" class="filter">
+        <div>
+            <h6>Vervoersmiddel</h6>
+            <label><input type="checkbox" value="Vliegtuig">Vliegtuig</label><br>
+            <label><input type="checkbox" value="Vliegtuig">Auto</label><br>
+            <label><input type="checkbox" value="Vliegtuig">Fiets</label><br>
+        </div>
+        <div>
+            <h6>Activiteit</h6>
+            <label><input type="checkbox" value="Vliegtuig">Stedentrip</label><br>
+            <label><input type="checkbox" value="Vliegtuig">Backpacken</label><br>
+            <label><input type="checkbox" value="Vliegtuig">All-inclusive</label><br>
+        </div>
+        <div>
+            <h6>Weer</h6>
+            <label><input type="checkbox" value="Vliegtuig">Tropisch</label><br>
+            <label><input type="checkbox" value="Vliegtuig">'Normaal'</label><br>
+            <label><input type="checkbox" value="Vliegtuig">Koud</label><br>
+        </div>
+        <div>
+            <h6>Duur reis</h6>
+            <label><input type="checkbox" value="Vliegtuig">3-5 dagen</label><br>
+            <label><input type="checkbox" value="Vliegtuig">6-12 dagen</label><br>
+            <label><input type="checkbox" value="Vliegtuig">13-21 dagen</label><br>
+            <label><input type="checkbox" value="Vliegtuig">22 dagen of meer</label><br>
+        </div>
+    </form>
+</div>
+
+<script>
+  function myFunction() {
+    var element = document.getElementById("filter");
+    element.classList.toggle("mystyle");
+  }
+</script>

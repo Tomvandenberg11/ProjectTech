@@ -63,8 +63,135 @@ header ul li a:hover {
     opacity: .6;
 }
 
-/*CONTENT*/
+/*FILTERS*/
+.filter {
+    display: none;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+    height: 0;
+    transition: height .5s;
+}
 
-h1 {
-    margin-top: 30px;
+.mystyle {
+    display: grid;
+    height: auto;
+    transition: height .5s;
+}
+
+.filter h6 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.filter label {
+    font-size: 12px;
+}
+
+.filter input {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+/*DESTINATIONS*/
+
+.destinations {
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 30px;
+    column-gap: 30px;
+}
+
+@media (max-width: 1000px) { /*breakpoint*/
+    .destinations {
+        grid-template-columns: 1fr 1fr;
+        width: 600px;
+    }
+}
+
+@media (max-width: 700px) { /*breakpoint*/
+    .destinations {
+        grid-template-columns: none;
+        width: 300px;
+    }
+}
+
+.destination {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 5px 5px 18px #888888;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 5px;
+    display: inline-block;
+    max-height: 400px;
+    padding-bottom: 20px;
+}
+
+.destination img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    height: 200px
+}
+
+.destination-content {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.destination h4 {
+    font-size: 18px;
+}
+
+.destination h5 {
+    font-size: 14px;
+}
+
+.destination p {
+    font-size: 12px;
+}
+
+.likeButtons {
+    display: flex;
+    margin: 10px auto;
+    width: 80%;
+    max-width: 200px;
+    justify-content: space-between;
+}
+
+.likeButtons a {
+    border-radius: 50%;
+    font-size: 12px;
+    display: inline-block;
+    background-color: green;
+    padding: 5px;
+    text-align: left;
+}
+
+.likeButtons a img {
+    width: 40px;
+    height: 40px;
+}
+
+.likeButtons label {
+    font-size: 22px;
+}
+
+.likeButtons .dislike {
+    transform: rotateX(-180deg);
+    background-color: red;
+}
+
+/*FOOTER*/
+
+footer {
+    /*position: absolute;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    height: 50px;
+    background-color: #333;
+    width: 100%;
+    color: whitesmoke;
 }
