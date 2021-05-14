@@ -1,7 +1,7 @@
 const _ = require('lodash');
 const express = require('express')
 const app = express()
-const port = 6969
+const port = process.env.PORT || 8000
 const {MongoClient} = require('mongodb');
 const ObjectID = require('mongodb').ObjectID
 
