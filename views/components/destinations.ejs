@@ -1,5 +1,6 @@
 <div class="destinations">
     <% destinations.forEach(function(destination) { %>
+
         <div class="destination">
             <img alt="destination image" src="<%- destination.image || 'https://i1.wp.com/saedx.com/blog/wp-content/uploads/2019/01/saedx-blog-featured-70.jpg?fit=1200%2C500&ssl=1'%>">
             <div class="destination-content">
@@ -7,9 +8,8 @@
                 <h5><%= destination.type.replace(/\w/, c => c.toUpperCase()) %> | <%= destination.days %> days</h5><br>
             </div>
             <div class="likeButtons">
-                <form method="post" action="/">
-                    <a id="dislike" href="#" class="dislike"><img alt="dislike" src="images/thumb.png"></a>
-                    <a id="like" href="#"><img alt="like" src="images/thumb.png"></a>
+                <form method="post" action="/update">
+                    <input type="submit" id="like" value="sdfsd">
                 </form>
             </div>
         </div>
