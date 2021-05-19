@@ -37,3 +37,5 @@ Je ziet dan een bericht in de terminal staan op welke link de app te zien is.
 
 Dit project is voorzien van een MIT licence. 
 
+## Bronnen
+Alle bronnen zijn op de pagina van het desbetreffende onderwerp gedocumenteerd.
