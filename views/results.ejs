@@ -6,7 +6,25 @@
 <body>
     <%- include('components/header'); %>
     <div class="container">
-        <h1><%= message %></h1>
+        <div class="destinations">
+            <% destinations.filter(function(destination) {
+            if (destination.liked) {  %>
+                <div class="destination">
+                    <img alt="destination image" src="<%- destination.image || 'https://i1.wp.com/saedx.com/blog/wp-content/uploads/2019/01/saedx-blog-featured-70.jpg?fit=1200%2C500&ssl=1'%>">
+                    <div class="destination-content">
+                        <h4><%= destination.country.replace(/\w/, c => c.toUpperCase())%> | <%= destination.capital.replace(/\w/, c => c.toUpperCase()) %></h4>
+                        <h5><%= destination.type.replace(/\w/, c => c.toUpperCase()) %> | <%= destination.days %> days</h5><br>
+                        <p>This destination is liked <%= destination.likes %> time(s) by other people!</p><br>
+                    </div>
+                    <div class="likeButtons">
+                        <form method="post" action="/dislike/<%= destination._id %>">
+                            <input type="image" src="https://i.pinimg.com/originals/39/44/6c/39446caa52f53369b92bc97253d2b2f1.png" id="dislike" name="dislike">
+                        </form>
+                    </div>
+                </div>
+            <% }});%>
+                <p class="emptyText">There are no liked destinations yet<br><br> <a href="../">Start liking!</a></p>
+        </div>
     </div>
 </body>
 </html>

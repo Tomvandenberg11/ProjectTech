@@ -123,8 +123,8 @@ header ul li a:hover {
     text-align: center;
     border-radius: 5px;
     display: inline-block;
-    max-height: 400px;
-    padding-bottom: 20px;
+    max-height: 420px;
+    padding-bottom: 40px;
 }
 
 .destination img {
@@ -147,49 +147,58 @@ header ul li a:hover {
 
 .destination h5 {
     font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
 }
 
 .destination p {
     font-size: 12px;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
 }
 
 .likeButtons {
     display: flex;
-    margin: 10px auto;
-    width: 80%;
-    max-width: 200px;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-.likeButtons a {
+#dislike, #like {
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
-    font-size: 12px;
-    display: inline-block;
-    background-color: green;
-    padding: 5px;
-    text-align: left;
+    border: none;
 }
 
-.likeButtons a img {
-    width: 40px;
-    height: 40px;
+#dislike:hover, #like:hover {
+    cursor: pointer;
 }
 
-.likeButtons label {
-    font-size: 22px;
+#dislike {
+    transform: rotateZ(180deg);
 }
 
-.likeButtons .dislike {
-    transform: rotateX(-180deg);
-    background-color: red;
+input:disabled {
+    opacity: .5;
+}
+
+.emptyText {
+    position:absolute; z-index: -1; text-align: center
+}
+
+.emptyText a {
+    padding: 5px 10px;
+    background-color: dodgerblue;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 18px;
+    color: whitesmoke;
+    text-decoration: none;
 }
 
 /*FOOTER*/
 
 footer {
-    /*position: absolute;*/
-    /*bottom: 0;*/
-    /*left: 0;*/
     height: 50px;
     background-color: #333;
     width: 100%;

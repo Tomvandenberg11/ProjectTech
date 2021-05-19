@@ -4,13 +4,15 @@
   "description": "this is a project for project-tech",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "start": "node server.js"
   },
   "author": "Tom van den Berg",
   "license": "MIT",
   "dependencies": {
     "dotenv": "^8.5.1",
     "ejs": "^3.1.6",
+    "eslint": "^7.26.0",
     "express": "^4.17.1",
     "lodash": "^4.17.21",
     "mongodb": "^3.6.6",
@@ -19,5 +21,13 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "nodemon": "^2.0.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tomvandenberg11/ProjectTech.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Tomvandenberg11/ProjectTech/issues"
+  },
+  "homepage": "https://github.com/Tomvandenberg11/ProjectTech#readme"
 }

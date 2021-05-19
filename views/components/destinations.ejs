@@ -1,17 +1,26 @@
 <div class="destinations">
-    <% destinations.forEach(function(destination) { %>
-
+    <% destinations.filter(function(destination) { %>
         <div class="destination">
-            <img alt="destination image" src="<%- destination.image || 'https://i1.wp.com/saedx.com/blog/wp-content/uploads/2019/01/saedx-blog-featured-70.jpg?fit=1200%2C500&ssl=1'%>">
+            <img alt="destination image" src="<%- destination.image %>">
             <div class="destination-content">
                 <h4><%= destination.country.replace(/\w/, c => c.toUpperCase())%> | <%= destination.capital.replace(/\w/, c => c.toUpperCase()) %></h4>
                 <h5><%= destination.type.replace(/\w/, c => c.toUpperCase()) %> | <%= destination.days %> days</h5><br>
+
+                <p>This destination is liked <%= destination.likes %> time(s) by other people!</p><br>
             </div>
             <div class="likeButtons">
-                <form method="post" action="/update">
-                    <input type="submit" id="like" value="sdfsd">
+                <form method="post" action="/dislike/<%= destination._id %>">
+                    <input type="image" src="https://i.pinimg.com/originals/39/44/6c/39446caa52f53369b92bc97253d2b2f1.png" id="dislike" name="dislike">
+                </form>
+                <form method="post" action="/like/<%= destination._id %>">
+                    <% if(destination.liked){ %>
+                        <input type="image" disabled src="https://i.pinimg.com/originals/39/44/6c/39446caa52f53369b92bc97253d2b2f1.png" id="like" name="like">
+                    <% } else{ %>
+                        <input type="image" src="https://i.pinimg.com/originals/39/44/6c/39446caa52f53369b92bc97253d2b2f1.png" id="like" name="like">
+                    <% } %>
                 </form>
             </div>
         </div>
     <% });%>
 </div>
+
