@@ -39,6 +39,7 @@ function main() {
           .then(result => {
               res.render('index.ejs', {
                 destinations: result,
+                title: 'Home',
               })
           })
           .catch(error => console.error(error))
@@ -49,6 +50,7 @@ function main() {
           .then(result => {
             res.render('results.ejs', {
               destinations: result,
+              title: 'Results',
             })
           })
           .catch(error => console.error(error))
