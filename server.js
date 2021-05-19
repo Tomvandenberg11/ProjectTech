@@ -24,7 +24,7 @@ function main() {
         useUnifiedTopology: true,
     })
 
-      // Promise, als de connectie er is voert het deze dingen uit
+    // Als er een connectie is wordt dit uitgevoerd
     .then(connection => {
 
       const db = connection.db('TravelBuddy')
@@ -34,6 +34,7 @@ function main() {
 
       app.use(express.static('static'))
 
+      // Destinations renderen naar de index pagina
       app.get('/', (req, res) => {
         collection.find().toArray()
           .then(result => {
@@ -45,6 +46,7 @@ function main() {
           .catch(error => console.error(error))
       })
 
+      // Destinations renderen naar de resultaten pagina
       app.get('/results', (req, res) => {
         collection.find().toArray()
           .then(result => {
@@ -96,6 +98,14 @@ function main() {
         }, 800)
       })
 
+      // 404 PAGINA
+      app.use(function(req,res){
+        res.status(404).render('404.ejs', {
+          title: 404
+        });
+      });
+
+      // Console log met daarin de link naar server
       app.listen(port, () => console.log(`De server is opgestart op http://localhost:${port}`))
     })
 }
