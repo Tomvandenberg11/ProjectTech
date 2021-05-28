@@ -1,7 +1,19 @@
 # Matching App - Travel Buddy
 
-Travel Buddy is een app waarmee de gebruikers van de app een reispartner kunnen vinden, op basis van hun persoonlijke voorkeuren. Er kan bijvoorbeeld gefilterd worden op activiteiten, het type vervoersmiddel, de rijstijd, het klimaat en de veiligheid in een land.
+Travel Buddy is een app waarmee de gebruikers van de app een reispartner kunnen vinden, op basis van hun persoonlijke voorkeuren. 
+Er zijn een aantal bestemmingen beschikbaar, welke de gebruikers kunnen liken en disliken. Als de gebruiker een bestemming geliked heeft kan de 
+gebruiker zien welke andere gebruikers die bestemming leuk vinden, waardoor ze met elkaar in contact kunnen komen en samen naar die bestemming kunnen gaan.
 
+Link naar de applicatie: [TravelBuddy](https://travel-buddy-tech.herokuapp.com/)
+
+#### Een screenshot van homepagina van de app
+![Home](static/images/desktop_home_screenshot.png "Home")
+
+#### Een screenshot van de resultaten pagina van de app
+![Home](static/images/desktop_result_screenshot.png "Home")
+
+#### Een screenshot van de mobiele versie van de app
+![Home](static/images/mobile_screenshot.png "Home")
 ## Installatie
 ### Clonen
 Om de app lokaal te laten draaien moet het project eerst lokaal worden gecloned.
@@ -33,8 +45,9 @@ Als je de bovenstaande stappen gevolgd hebt kan de app opgestart worden door:
 te runnen in de terminal.
 Je ziet dan een bericht in de terminal staan op welke link de app te zien is.
 
-## Licence
+## 
 
+## Licence
 Dit project is voorzien van een MIT licence. 
 
 ## Bronnen
